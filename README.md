@@ -27,10 +27,10 @@ On the dashboard that appears after login, I wonder why verifying the email is t
 
 <img width="904" alt="Screen Shot 2021-04-02 at 1 44 06 PM" src="https://user-images.githubusercontent.com/13269259/113444425-808eb100-93b9-11eb-9086-884408cbe70b.png">
 
-I understand that this is to reduce friction but it makes me question what the impact of delaying the verification would be. Having an explanation about that - such as "You can go ahead and get started with your Stripe Integration but would need to verify your email before going live. This is needed so that we know it's really you and can send you important information." -  would help. Nonetheless, I go ahead and verify my email which is simple enough to do.
+As a user, I understand that this is to reduce friction but it makes me question what the impact of delaying the verification would be. Having an explanation about that - such as "You can go ahead and get started with your Stripe Integration but would need to verify your email before going live. This is needed so that we know it's really you and can send you important information." -  would help. Nonetheless, I go ahead and verify my email which is simple enough to do.
 
 ### Change business name
-I'm not a fan of the "New Business" name on my account. So I go ahead and hover over it. Seeing the "Edit" option right there with a simple way to change my name feels great!
+I'm not a fan of the "New Business" name on my account. So I go ahead and hover over it. Seeing the "Edit" option right there with a simple way to change my name feels great! Also, writing a generic name like that is a good way to nudge users to actually edit that info - it employs the basic necessity of humans to fix low hanging fruits they spot.
 
 <img width="198" alt="Screen Shot 2021-04-02 at 1 49 58 PM" src="https://user-images.githubusercontent.com/13269259/113444868-52f63780-93ba-11eb-8a1a-0e82091f2c80.png">
 
@@ -88,11 +88,11 @@ Upon clicking the link for this, I was taken to this page.
 The major issue with this page is that there was no clear call to action. Coloring the 'Get Started' and 'Find a Partner' buttons differently might make the call more explicit.
 I selected Platform or Marketplace and went ahead. Upon doing that, I was taken to the home page where I was shown this:
 <img width="1370" alt="Screen Shot 2021-04-02 at 6 50 00 PM" src="https://user-images.githubusercontent.com/13269259/113461916-3c64d600-93e4-11eb-8656-a29cecdd98b0.png">
-This is very relevant information. In case this would have been shown earlier, I would have known exactly which Stripe product to use (Connect) and where to start. This will eliminate the step of finding the right documentation on my own. Additionally, it will reduce one pre-requisite in the documentation which gives the user the impression of reduced setup work. In light of this, I think that registering the platform should be done the first time the user lands on the dashboard.
+This is very relevant information. In case this was shown earlier, I would have known exactly which Stripe product to use (Connect) and where to start. This will eliminate the step of finding the right documentation on my own. Additionally, it will reduce one pre-requisite in the documentation which gives the user the impression of reduced setup work. In light of this, I think that registering the platform should be done the first time the user lands on the dashboard.
 
 
 Prereq #2 - Activate your account
-This flow was smooth overall. I particularly liked the explanatory messages for some fields that showed up on the side.
+This flow was smooth overall. I particularly liked the explanatory messages for some fields that showed up on the side. These messages appeared for exactly the fields that are less common knowledge.
 <img width="739" alt="Screen Shot 2021-04-02 at 6 57 49 PM" src="https://user-images.githubusercontent.com/13269259/113462195-54892500-93e5-11eb-8de3-87243b592abd.png">
 
 After completing Step 2, the message on the home page was back to the default "Explore docs" one, leading to an inconsistent experience. As a user, I would expect to see the Connect docs link everytime once I've registered my platform.
@@ -101,7 +101,7 @@ After completing Step 2, the message on the home page was back to the default "E
 
 
 Prereq #3 - Fill out your platform profile
-Upon clicking the link to this prereq on the docs page, I was taken to the home page again with a link to complete the profile.. Instead, since the action I was going to take was already known, I should have been taken right to the prereq step.
+Upon clicking the link to this prereq on the docs page, I was taken to the home page again with a link to complete the profile. Instead, since the action I was going to take was already known, I should have been taken right to the prereq step.
 
 <img width="1379" alt="Screen Shot 2021-04-02 at 7 07 09 PM" src="https://user-images.githubusercontent.com/13269259/113462464-a0889980-93e6-11eb-8235-e0c5c0fdcae6.png">
 
@@ -117,4 +117,25 @@ The section below this was extremely helpful.
 
 
 Prereq #3 - Brand settings
+Went well:
+- Allowing the merchant to customize how the onboarding page looks is good for user experience. It provides their users the feeling that they're still within the context of the original website even though they've been redirected to a Stripe page for onboarding, enhancing the user's trust in the flow. Moreover, merchants would love to customize the experience at every step to have greater control of the overall user experience.
 
+<img width="1009" alt="Screen Shot 2021-04-03 at 5 19 13 PM" src="https://user-images.githubusercontent.com/13269259/113492902-b78bc200-94a0-11eb-82e9-f5444863694e.png">
+
+
+To be improved:
+- The prereq bullet says "Customize your brand settings on the Connect settings page. This information is required for Connect Onboarding.". As a user, I can't put my finger on what 'Connect Onboarding' means. Are we talking about onboarding me as a business onto Connect? Or about onboarding sellers onto my platform?  
+Solution: Mention clearly that this action will customize the page that sellers see while signing up on the business platform.
+
+- Upon clicking the link, I am taken to the Connect Settings page but not directly to the section of the prereq. In order to verify the action to take here, I need to go back to the documentation page and re-read "Customize your brand settings.." and scroll down to look at all the headings on the Connect Settings page to learn that 'Branding' is the section I need to head to.  
+
+- The 'Save branding changes' button is well named as it preserves the context of the prerequisite.
+
+<img width="197" alt="Screen Shot 2021-04-03 at 5 23 20 PM" src="https://user-images.githubusercontent.com/13269259/113492992-4b5d8e00-94a1-11eb-9d21-39238db2637e.png">
+
+However, upon clicking it, a loader appears to show that saving is in progress but when the save is completed, the loader disappears and the button becomes unclickable. This leaves the user wondering whether the save was successfully completed so a temporary tick mark might be more satisfactory from a UX perspective.
+
+<img width="206" alt="Screen Shot 2021-04-03 at 5 27 17 PM" src="https://user-images.githubusercontent.com/13269259/113493052-d8a0e280-94a1-11eb-8153-6fa0c7819604.png">
+
+
+### Set up Stripe
