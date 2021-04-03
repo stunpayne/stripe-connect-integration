@@ -138,4 +138,20 @@ However, upon clicking it, a loader appears to show that saving is in progress b
 <img width="206" alt="Screen Shot 2021-04-03 at 5 27 17 PM" src="https://user-images.githubusercontent.com/13269259/113493052-d8a0e280-94a1-11eb-8153-6fa0c7819604.png">
 
 
+For further steps  
+Programming language chosen: Python 3
+
 ### Set up Stripe
+Went well:
+- This step is simple and self-explanatory. 
+- Throughout the documentation, the presence of code samples in multiple languages is helpful to a wide range of developers and gives the impression of a very mature API base.
+
+To be improved:
+- The prevalent version of Python now is Python3. Anyone starting a new codebase in Python would probably use Python3. The documentation should hence be updated to include `pip3` along with `pip` for Python3 users as shown below.
+ 
+Current:  
+<img width="842" alt="Screen Shot 2021-04-03 at 5 43 06 PM" src="https://user-images.githubusercontent.com/13269259/113493342-0dae3480-94a4-11eb-9ef2-8b30a9745779.png">
+
+Suggested:  
+<img width="842" alt="Screen Shot 2021-04-03 at 5 45 44  PM" src="https://user-images.githubusercontent.com/13269259/113493385-6c73ae00-94a4-11eb-8042-cf53c885ffde.png">
+
