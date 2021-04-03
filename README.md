@@ -61,3 +61,60 @@ Lastly, I like seeing 'Read more about reporting and when your data becomes avai
 Having explored the menu options, I begin my integration. I go to the Home Page and click on 'Explore Docs'
 
 <img width="886" alt="Screen Shot 2021-04-02 at 2 20 24 PM" src="https://user-images.githubusercontent.com/13269259/113446972-92bf1e00-93be-11eb-8cfd-85cee48ed12a.png">
+
+It was quite easy to spot "Multiparty payments" at the bottom. Pros: Platform, Marketplace, Two-sided business -> all helpful keywords for the target customer to find the right product. From the list of integration options below it, it was quite clear that "Collect payments then pay out" was the right approach for me to take. Although my sellers would be shipping to users on their own, I would issue payments to them only once the delivery has been initiated.
+
+Went well: The subtitle restates my use case and reaffirms that I am on the right page  
+<img width="796" alt="Screen Shot 2021-04-02 at 6 31 45 PM" src="https://user-images.githubusercontent.com/13269259/113461322-af208200-93e1-11eb-8191-6dc14f362a69.png">
+
+Can be improved: The homeowner example on this page makes the use case being served quite clear. To make the example even clearer and reduce user read time, a simple flow diagram can be built. The connect flow can be described as -  
+    User                ->                      Platform               ->                 Seller  
+(Makes payment)         (Accepts payments from User, pays out to Seller)     (Receives payout from Platform)  
+
+The example can then be described as -  
+    Tenants                ->                   Kavholm               ->                 Homeowners  
+(Makes payment)         (Accepts payments from Tenants, pays out to Homeowner)     (Receives payout from Kavholm)  
+
+This would reduce the setup time for the user, help them visualize the flow and enable them to get into the tutorial more quickly.
+
+### Prereqs
+
+<img width="844" alt="Screen Shot 2021-04-02 at 6 45 39 PM" src="https://user-images.githubusercontent.com/13269259/113461767-a16bfc00-93e3-11eb-83cb-55995349b1bc.png">
+
+Prereq #1 - Register your platform
+Upon clicking the link for this, I was taken to this page.
+<img width="1391" alt="Screen Shot 2021-04-02 at 6 46 03 PM" src="https://user-images.githubusercontent.com/13269259/113461784-ae88eb00-93e3-11eb-922c-63f01b93e87a.png">
+
+The major issue with this page is that there was no clear call to action. Coloring the 'Get Started' and 'Find a Partner' buttons differently might make the call more explicit.
+I selected Platform or Marketplace and went ahead. Upon doing that, I was taken to the home page where I was shown this:
+<img width="1370" alt="Screen Shot 2021-04-02 at 6 50 00 PM" src="https://user-images.githubusercontent.com/13269259/113461916-3c64d600-93e4-11eb-8656-a29cecdd98b0.png">
+This is very relevant information. In case this would have been shown earlier, I would have known exactly which Stripe product to use (Connect) and where to start. This will eliminate the step of finding the right documentation on my own. Additionally, it will reduce one pre-requisite in the documentation which gives the user the impression of reduced setup work. In light of this, I think that registering the platform should be done the first time the user lands on the dashboard.
+
+
+Prereq #2 - Activate your account
+This flow was smooth overall. I particularly liked the explanatory messages for some fields that showed up on the side.
+<img width="739" alt="Screen Shot 2021-04-02 at 6 57 49 PM" src="https://user-images.githubusercontent.com/13269259/113462195-54892500-93e5-11eb-8de3-87243b592abd.png">
+
+After completing Step 2, the message on the home page was back to the default "Explore docs" one, leading to an inconsistent experience. As a user, I would expect to see the Connect docs link everytime once I've registered my platform.
+
+<img width="879" alt="Screen Shot 2021-04-02 at 7 02 32 PM" src="https://user-images.githubusercontent.com/13269259/113462337-fd378480-93e5-11eb-86da-e27355b44825.png">
+
+
+Prereq #3 - Fill out your platform profile
+Upon clicking the link to this prereq on the docs page, I was taken to the home page again with a link to complete the profile.. Instead, since the action I was going to take was already known, I should have been taken right to the prereq step.
+
+<img width="1379" alt="Screen Shot 2021-04-02 at 7 07 09 PM" src="https://user-images.githubusercontent.com/13269259/113462464-a0889980-93e6-11eb-8235-e0c5c0fdcae6.png">
+
+At the end of the platform profile, I was shown recommendations for the documentation I can follow for my integration.
+
+<img width="754" alt="Screen Shot 2021-04-02 at 7 16 26 PM" src="https://user-images.githubusercontent.com/13269259/113462724-ee51d180-93e7-11eb-86ea-4f5c50c5fe32.png">
+
+After having gone through a page listing all docs, finding the right one and completing the prereqs, I am shown the links to the docs that Stripe believes is right for me. This experience reaffirms my earlier point that these steps should have come earlier. In doing that, there surely is a cost of asking the user to complete several steps before they can begin looking into the documentation but that would be the right thing to do as the user hasn't begun the integration yet anyway. Moreover, if the user is told that these steps will help them find the right integration and documentation, they would be more easily convinced to completing these forms.
+
+The section below this was extremely helpful. 
+
+<img width="1370" alt="Screen Shot 2021-04-02 at 7 20 37 PM" src="https://user-images.githubusercontent.com/13269259/113462833-8354ca80-93e8-11eb-8244-81dbf4d40a25.png">
+
+
+Prereq #3 - Brand settings
+
