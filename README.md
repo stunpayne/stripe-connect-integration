@@ -1,6 +1,24 @@
 # stripe-connect-integration
 A sample Stripe Connect integration
 
+# Executive Summary
+
+Top concerns:
+- Accepting payments from users
+- Paying out to businesses in defined SLAs with reliability
+- Quick & easy integration
+- Easy generation of invoices and dashboards for businesses
+- Security
+
+What worked well:
+- Integration was super easy, documentation is self explanatory and code generated automatically is a big help
+
+
+To be improved:
+- Some terms (destination charges, Express accounts) are left unexplained
+
+
+
 # Friction Log
 I am assuming the persona of a startup's technical co-founder, one who can code, looking to integrate with a payment gateway for processing transactions on his platform app. The app I'm building is an online shopping marketplace which connects artisans building customized home decor with local consumers. Consumers will make payments to my platform app for items they wish to purchase. My app will take a small fixed percentage fee and relay the remaining payment to the artisan.
 
@@ -263,6 +281,7 @@ The user can be informed in the documentation though that Accounts and AccountLi
 
 
 
+<img width="693" alt="Screen Shot 2021-04-04 at 11 54 59 AM" src="https://user-images.githubusercontent.com/13269259/113515854-95e01880-953c-11eb-8f19-00bfce6c7a6d.png">
 
 
 
