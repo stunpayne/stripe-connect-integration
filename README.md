@@ -155,3 +155,95 @@ Current:
 Suggested:  
 <img width="842" alt="Screen Shot 2021-04-03 at 5 45 44  PM" src="https://user-images.githubusercontent.com/13269259/113493385-6c73ae00-94a4-11eb-8042-cf53c885ffde.png">
 
+### Create a connected account
+
+#### Introduction paragraph
+Went well:
+- The explanation of a connected account is superb. It specifies whom the account is for, what it will be used for and links it to the home-rental example to ensure no doubts are left.
+
+<img width="864" alt="Screen Shot 2021-04-03 at 6 42 57 PM" src="https://user-images.githubusercontent.com/13269259/113494271-6a155200-94ac-11eb-8458-3d4cbd04a3b5.png">
+
+#### What you're building
+Went well:  
+The "What you're building" view is helpful as it allows the user to begin with the goal in mind.
+
+<img width="841" alt="Screen Shot 2021-04-03 at 6 46 09 PM" src="https://user-images.githubusercontent.com/13269259/113494318-dd1ec880-94ac-11eb-8666-b58829d42fc4.png">
+
+- The "Clone with CLI" option mentions that the user's Stripe API key will be used in configuring the button. This is helpful for the user as it avoids additional effort from their end.
+ 
+<img width="837" alt="Screen Shot 2021-04-03 at 6 50 12 PM" src="https://user-images.githubusercontent.com/13269259/113494394-6e8e3a80-94ad-11eb-965a-f7ff3b192925.png">
+
+
+To be improved:  
+- The button, however, opens the link on the same page, moving the reader away from the documentation. It should, instead, open on a different page so that the user can close that window and easily come back to the documentation.
+
+
+#### Create express account and prefill information
+Went well:
+- The code snippet shows that my test key will be used, signaling to me that all the code in the page can be directly copied - a great experience!
+
+<img width="844" alt="Screen Shot 2021-04-03 at 7 02 04 PM" src="https://user-images.githubusercontent.com/13269259/113494577-15bfa180-94af-11eb-8c03-1148542e6e66.png">
+
+To be improved:
+- The moment I read I have to create an 'Express account', I started questioning what that meant. Since there was no explanation here, I resorted to checking out the [Accounts API Page](https://stripe.com/docs/api/accounts). From there, I followed a link to "[create and manage Express or Custom accounts](https://stripe.com/docs/connect/accounts)" that explained the difference in a table.
+
+<img width="621" alt="Screen Shot 2021-04-03 at 7 10 49 PM" src="https://user-images.githubusercontent.com/13269259/113494699-4f44dc80-94b0-11eb-8935-22228f1c78d4.png">
+
+&nbsp;&nbsp;I think it is natural for one to question the difference between account types. In order to assuage these concerns, it might be helpful to provide a short description of the accounts as shown below.
+<img width="856" alt="Screen Shot 2021-04-03 at 7 14 20 PM" src="https://user-images.githubusercontent.com/13269259/113494729-cda17e80-94b0-11eb-8372-bca56c12488f.png">
+
+#### Create an account link
+To be improved:  
+- The value of the 'account' parameter is shown in the code sample but not explained in the description above it. A sample account ID is mentioned. Due to this, the user would have to check which parameter in the Account API response corresponds to the given value. A simple explanation as below might help the dev get the answer more quickly.
+
+<img width="748" alt="Screen Shot 2021-04-03 at 7 49 35 PM" src="https://user-images.githubusercontent.com/13269259/113495229-b9ac4b80-94b5-11eb-8d10-e34c0fec5b6e.png">
+
+The sample code can then be changed accordingly.
+<img width="742" alt="Screen Shot 2021-04-03 at 7 50 57 PM" src="https://user-images.githubusercontent.com/13269259/113495264-e9f3ea00-94b5-11eb-8c69-3772cf8eeda0.png">
+
+#### Redirect your user to the account link URL
+Went well:
+- A lot of key points were mentioned in this step
+  - Remember to authenticate users before redirecting
+  - Redirect link contains personal information so can be used only once
+  - Don't email/text the link, only redirect
+  - Account becomes immutable after link generation
+
+These points will be very helpful for any user to keep in mind.
+
+#### Handle the user returning to your platform 
+
+Went well:
+- Including both `return_url` and `refresh_url` is a good choice. As I've learnt from experience building payment platforms, it helps merchants to have different pages to handle different scenarios and power a variety of experiences.
+- The cases in which both the URLs are to be used are well laid out.
+- This comment is particularly helpful in closing the loop of actions to take in every scenario for the user. 
+
+<img width="801" alt="Screen Shot 2021-04-03 at 8 17 21 PM" src="https://user-images.githubusercontent.com/13269259/113495820-9be0e580-94b9-11eb-8c94-7413ac03c50a.png">
+
+
+To be improved:  
+- There should be a link on the `account.updated` webhooks bullet just as there is one on the Accounts API one
+
+<img width="523" alt="Screen Shot 2021-04-03 at 8 16 47 PM" src="https://user-images.githubusercontent.com/13269259/113495809-853a8e80-94b9-11eb-9f01-503add970735.png">
+
+
+
+#### Handle users that haven’t completed onboarding 
+
+Went well:
+- The action to take in the cases wherein a user coming to the `return_url` might not have been onboarded completely was unanswered and lingering at the back of my mind until this point. The explanation in this section answers this question directly and completely.
+
+To be improved:
+- One strength of Stripe's docs is that almost every heading is hyperlinked. This can be used to hyperlink API parameters such as `charges_enabled` in the below paragraph to [this link](https://stripe.com/docs/api/accounts/object#account_object-charges_enabled).
+
+<img width="841" alt="Screen Shot 2021-04-03 at 8 29 45 PM" src="https://user-images.githubusercontent.com/13269259/113496047-558c8600-94bb-11eb-9adb-e5fa0ef975f2.png">
+
+
+Step 2 Went Well:
+Overall, the order of the steps 2.1-5 makes sense and just going through them explains what needs to be done to the user. I came out of this step with almost no questions about the actions to take in different scenarios and understood very well what I am supposed to do.
+
+
+
+
+
+
