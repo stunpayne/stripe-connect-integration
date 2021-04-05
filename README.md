@@ -279,11 +279,15 @@ Step 2 To be improved:
 The user can be informed in the documentation though that Accounts and AccountLinks are maintained as separate resources and individual APIs exist for them too.
 
 
-
+- Tell user about test dashboard early on
 
 <img width="693" alt="Screen Shot 2021-04-04 at 11 54 59 AM" src="https://user-images.githubusercontent.com/13269259/113515854-95e01880-953c-11eb-8f19-00bfce6c7a6d.png">
 
 
+<img width="465" alt="Screen Shot 2021-04-04 at 9 25 06 PM" src="https://user-images.githubusercontent.com/13269259/113530682-3b6ea880-958c-11eb-8b1f-f27a8a651ed8.png">
+
+
+<img width="1177" alt="Screen Shot 2021-04-04 at 9 24 54 PM" src="https://user-images.githubusercontent.com/13269259/113530677-33af0400-958c-11eb-8195-dbed30858a6c.png">
 
 
 
