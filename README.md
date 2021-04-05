@@ -16,21 +16,22 @@ I am assuming the persona of a startup's technical co-founder, one who can code,
 
 
 <ins>What worked well:</ins>  
-- Most of the integration was smooth and easy. Anyone who knows how to code will easily understand the APIs and get onboarded quickly.
-- Documentation is comprehensive and builds confidence in the capabilities of the Stripe system
-- Code samples were fairly copy-pastable and immensely helpful
+1. Most of the integration was smooth and easy. Anyone who knows how to code will easily understand the APIs and get onboarded quickly.
+2. Documentation is comprehensive and builds confidence in the capabilities of the Stripe system
+3. Code samples were fairly copy-pastable and immensely helpful
 
 
 <ins>Improvements: </ins>  
-- Stripe CLI-generated code doesn't work out of the box leading to frustration in integration
+1. Stripe CLI-generated code doesn't work out of the box leading to frustration in integration
   - Solution: The code can be simplified to require less setup (such as env variables) from the developer. Regular testing of the sample codes with external developers (and by the Stripe Connect PM and dev teams) will improve reliability of the code. The goal should be to have the code functioning out of the box in 100% of cases.
-- Payout schedule only has periodic (daily/weekly/monthly) options which could lead to high transaction costs for Stripe
+2. Incorrect dates at multiple places make the user question whether Stripe's reports will be accurate
+  - Solution: Correct all dates facing the user. Add automation testing for front end to ensure long-term reliability.
+4. Payout schedule only has periodic (daily/weekly/monthly) options which could lead to high transaction costs for Stripe
   - Solution: An option to trigger payouts when the balance reaches a threshold amount (and nudging users to adopt this option) will reduce transaction costs for Stripe
-- 'Payout' term used for multiple operations (move funds to own bank, transfer to sellers) leading to confusion - even the document heading says "Collect payments then pay out"
-  - Solution: Since 'Transfers' is the API for moving funds to sellers, ensure that this is the term used for this action throughout.
--  Some terms (destination charges, Express accounts) are left unexplained
+5. 'Payout' term used for multiple operations (move funds to own bank, transfer to sellers) leading to confusion - even the document heading says "Collect payments then pay out"
+  - Solution: Since 'Transfers' is the API for moving funds to sellers, ensure that this is the term used for this action throughout the documentation.
+6. Some terms (destination charges, Express accounts) are left unexplained
   - Solution: Add one-line explanations with hyperlinks to detailed documentation wherever possible (possible solution [here](#create-express-account-and-prefill-information))
-
 
 
 # Friction Log
@@ -57,6 +58,7 @@ As the startup's technical co-founder, I'm building an app for an online shoppin
 
 I've heard great things about Stripe so I log on to the website(https://stripe.com/) to check it out.
 
+
 ## Sign Up and Dashboard
 
 ### Website Landing
@@ -81,19 +83,23 @@ The Sign Up is simple and easy. It makes sense that email, password, full name a
 
 
 Can be improved:  
-1. I've received an email to verify my email on Stripe. 
+I've received an email to verify my email on Stripe. 
 On the dashboard that appears after login, I wonder why verifying the email is the fourth step instead of the first.
 
 <img width="904" alt="Screen Shot 2021-04-02 at 1 44 06 PM" src="https://user-images.githubusercontent.com/13269259/113444425-808eb100-93b9-11eb-9086-884408cbe70b.png">
 
-As a user, I understand that this is to reduce friction but it makes me question what the impact of delaying the verification would be. Having an explanation about that - such as "You can go ahead and get started with your Stripe Integration but would need to verify your email before going live. This is needed so that we know it's really you and can send you important information." -  would help. Nonetheless, I go ahead and verify my email which is simple enough to do.
+As a user, I understand that this is to reduce friction but it makes me question what the impact of delaying the verification would be. Having an explanation about that - such as "You can go ahead and get started with your Stripe Integration but would need to verify your email before going live. This is needed so that we know it's really you and can send you important information." -  would help.
 
 <ins>Change business name</ins>  
-I'm not a fan of the "New Business" name on my account. So I go ahead and hover over it. Seeing the "Edit" option right there with a simple way to change my name feels great! Also, writing a generic name like that is a good way to nudge users to actually edit that info - it employs the basic necessity of humans to fix low hanging fruits they spot.
+What I did:
+Saw "New Business" name on my account and tried to change it
+
+What went well:  
+Seeing the "Edit" option right there with a simple way to change my name feels great! Also, writing a generic name like that is a good way to nudge users to actually edit that info - it employs the basic necessity of humans to fix low hanging fruits they spot.
 
 <img width="198" alt="Screen Shot 2021-04-02 at 1 49 58 PM" src="https://user-images.githubusercontent.com/13269259/113444868-52f63780-93ba-11eb-8a1a-0e82091f2c80.png">
 
-I apply my right-brain skills and choose the name "ArtIsOn" as a pun on "artisan", feel good about myself and move on :)
+I apply my right-brain skills, choose the name "ArtIsOn" as a pun on "artisan", feel good about myself and move on :)
 
 ### Exploring dashboard
 <ins>Scanning the Home Page</ins>  
@@ -108,26 +114,35 @@ I try to edit the charts using the 'Edit charts' button but that doesn't work, u
 
 
 <ins>Scanning menus</ins>  
-I quickly have a look at the other menu options before I start my integration to see what all information will be available on the dashboard. Everything seems quite self-explanatory.
+What I did:
+Quickly have a look at the other menu options before I start my integration.
 
-I notice a small bug in the order of the dates mentioned on the 'Financial reports' page. Instead of `Apr2-Mar31`, it should be `Mar31-Apr2` assuming that the last two days are what is being talked about here (unless this shows the previous year's data, in which case Apr 2 doesn't make sense as a starting point).
+What went well:  
+- Everything seems quite self-explanatory. Descriptions provided for each section seem to be helpful.
 
-Lastly, I like seeing 'Read more about reporting and when your data becomes available.'. This is the kind of info I was looking for when scanning the home page above.
+- I like seeing 'Read more about reporting and when your data becomes available.' in the Reports section. This is what I was looking for when scanning the home page above.
 
 <img width="1018" alt="Screen Shot 2021-04-02 at 2 06 30 PM" src="https://user-images.githubusercontent.com/13269259/113446058-a23d6780-93bc-11eb-98ab-d74afbf497a2.png">
 
 
+Can be improved:  
+- I notice a small bug in the order of the dates mentioned on the 'Financial reports' page. Instead of `Apr2-Mar31`, it should be `Mar31-Apr2` assuming that the last two days are what is being talked about here (unless this shows the previous year's data, in which case Apr 2 doesn't make sense as a starting point).
+
+
 ## Integration
+What I did:  
 Having explored the menu options, I begin my integration. I go to the Home Page and click on 'Explore Docs'
 
 <img width="886" alt="Screen Shot 2021-04-02 at 2 20 24 PM" src="https://user-images.githubusercontent.com/13269259/113446972-92bf1e00-93be-11eb-8cfd-85cee48ed12a.png">
 
-It was quite easy to spot "Multiparty payments" at the bottom. Pros: Platform, Marketplace, Two-sided business -> all helpful keywords for the target customer to find the right product. From the list of integration options below it, it was quite clear that "Collect payments then pay out" was the right approach for me to take. Although my sellers would be shipping to users on their own, I would issue payments to them only once the delivery has been initiated.
-
-Went well: The subtitle restates my use case and reaffirms that I am on the right page  
+What went well:  
+- Easy to spot "Multiparty payments" at the bottom
+- Platform, Marketplace, Two-sided business -> all helpful keywords for the target customer to find the right product. From the list of integration options below it, it was quite clear that "Collect payments then pay out" was the right approach for me to take. Although my sellers would be shipping to users on their own, I would issue payments to them only once the delivery has been initiated.
+- The subtitle restates my use case and reaffirms that I am on the right page  
 <img width="796" alt="Screen Shot 2021-04-02 at 6 31 45 PM" src="https://user-images.githubusercontent.com/13269259/113461322-af208200-93e1-11eb-8191-6dc14f362a69.png">
 
-Can be improved: The homeowner example on this page makes the use case being served quite clear. To make the example even clearer and reduce user read time, a simple flow diagram can be built. The connect flow can be described as -  
+Can be improved:  
+- The homeowner example on this page makes the use case being served quite clear. To make the example even clearer and reduce user read time, a simple flow diagram can be built. The connect flow can be described as -  
     User                ->                      Platform               ->                 Seller  
 (Makes payment)         (Accepts payments from User, pays out to Seller)     (Receives payout from Platform)  
 
@@ -327,8 +342,8 @@ The user can be informed in the documentation though that Accounts and AccountLi
 
 #### Delayed transfers
 
-- Tell user about test dashboard early on
-- Control number of transactions and send payouts?
+
+- Control number of transactions and send payouts on threshold amount?
 - Invoicing
 - What do payouts really mean?
 
@@ -336,3 +351,7 @@ The user can be informed in the documentation though that Accounts and AccountLi
 
 
 
+<img width="350" alt="Screen Shot 2021-04-05 at 11 32 33 AM" src="https://user-images.githubusercontent.com/13269259/113598349-9fcc4f00-9602-11eb-8b1d-750a7a163bfc.png">
+
+
+<img width="441" alt="Screen Shot 2021-04-05 at 11 24 29 AM" src="https://user-images.githubusercontent.com/13269259/113597559-81b21f00-9601-11eb-88d2-0cd3483deff3.png">
