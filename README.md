@@ -47,7 +47,7 @@ I am assuming the persona of a startup's technical co-founder, one who can code,
 2. Incorrect dates at multiple places make the user question whether Stripe's reports will be accurate  
     * Solution: Correct all dates facing the user. Add automation testing for front end to ensure long-term reliability.
 3. Platforms shouldn't have to switch to manual payouts to add funds for transfers.
-    * Solution: Maintain balances for transfers and other expenses in separate compartments, allow user to direct funds from payments, top-ups etc. to individual compartments.
+    * Solution: Although I would like to investigate this further, my current hypothesis is that allowing platforms to add funds even on an automated payout schedule should not be an issue.
 4. Payout schedule only has periodic (daily/weekly/monthly) options which could lead to high transaction costs for Stripe  
     * Solution: An option to trigger payouts when the balance reaches a threshold amount (and nudging users to adopt this option) will reduce transaction costs for Stripe
 5. 'Payout' term used for multiple operations (move funds to own bank, transfer to sellers) leading to confusion - even the document heading says "Collect payments then pay out"  
@@ -423,16 +423,38 @@ My hypothesis is that these errors arose because of the absence of data for the 
 
 
 
-### Top up from bank account to Stripe balance
+### Top up and Payout
 What I did:  
-Attempt to top up funds from bank account to Stripe balance to test separete transfers
+1. Attempt to top up funds from bank account to Stripe balance to test separate transfers
+2. Attempt to pay out to bank account from Stripe balance
 
-<img width="350" alt="Screen Shot 2021-04-05 at 11 32 33 AM" src="https://user-images.githubusercontent.com/13269259/113598349-9fcc4f00-9602-11eb-8b1d-750a7a163bfc.png">
 
+What went well:  
+- Test bank account made testing seamless
+
+
+Can be improved:  
+
+1. I got an error that I would have to enable manual payouts to add funds to my payout balance. At the moment, this does not make sense to me. As I see it, the platform balance account should be able to receive funds regardless of when the payouts are scheduled for - this would be just another source of funds for the account.  
 <img width="441" alt="Screen Shot 2021-04-05 at 11 24 29 AM" src="https://user-images.githubusercontent.com/13269259/113597559-81b21f00-9601-11eb-88d2-0cd3483deff3.png">
 
+2. The date of the payout to my bank account appears to be of the next day with the word "Paid" - in the past tense. This is either the case of an incorrect date or a tense misnomer.  
+<img width="350" alt="Screen Shot 2021-04-05 at 11 32 33 AM" src="https://user-images.githubusercontent.com/13269259/113598349-9fcc4f00-9602-11eb-8b1d-750a7a163bfc.png">
 
-### Generate Reports
+
+### Invoicing and Dashboards
+What I did:  
+Although it wasn't relevant to my current platform, I tried out the no-code invoice feature as it seems useful for future use cases. Also, I believe no-code is the future and, thus, an area in which Stripe should focus its efforts on.
+
+
+What went well:  
+1. The invoice creation is quite exhaustive with options to create several kinds of coupons which can be applied either on the whole bill or on individual items.
+2. Tax creation is also smooth as sample taxes are provided to aid the user. 
+
+
+
+Can be improved:  
+1. Creation of coupons and taxes happens in a new browser tab. Once these are created, the user may resort to a) restarting the invoicing flow in the same tab OR b) if they are sophisticated enough browser users, closing the new tab and going back to the older tab to continue the flow. In this case, the list of coupons and taxes is not immediately updated.
 
 
 
