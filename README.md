@@ -6,7 +6,7 @@ Notes on a sample Stripe Connect integration
 I am assuming the persona of a startup's technical co-founder, one who can code, looking to integrate with a payment gateway for processing transactions on his platform app.
 
 
-<ins>Top user needs from a payment gateway:</ins>  
+<ins>Top user needs from a payment processor:</ins>  
 - Accepting payments from customers
 - Transferring funds to businesses within defined SLAs with reliability
 - Quick & easy integration
@@ -50,7 +50,7 @@ I am assuming the persona of a startup's technical co-founder, one who can code,
     * Solution: An option to trigger payouts when the balance reaches a threshold amount (and nudging users to adopt this option) will reduce transaction costs for Stripe
 5. 'Payout' term used for multiple operations (move funds to own bank, transfer to sellers) leading to confusion - even the document heading says "Collect payments then pay out"  
     * Solution: Since 'Transfers' is the API for moving funds to sellers, ensure that this is the term used for this action throughout the documentation.
-6. Some terms (destination charges, Express accounts) are left unexplained  
+6. Some terms (destination charges, Express accounts) are left unexplained leading to unanswered questions for the user  
     * Solution: Add one-line explanations with hyperlinks to detailed documentation wherever possible (as shown in the [improvement for Express accounts](#create-express-account-and-prefill-information))
 
 
@@ -68,9 +68,9 @@ I am assuming the persona of a startup's technical co-founder, one who can code,
   - [Create a connected account](#create-a-connected-account)
   - [Accept a payment](#accept-a-payment)
     - [Delayed transfers](#delayed-transfers)
-- [Invoicing and Dashboards]
-  - Invoices to customers
-  - Express account dashboards
+- [Generate Reports](#generate-reports)
+- [Top up Stripe balance](#top-up-from-bank-account-to-stripe-balance)
+- [Invoicing and Dashboards](#invoicing-and-dashboards)
 
 
 ## Platform Introduction
@@ -384,16 +384,21 @@ Can be improved:
   - Assuming environment variables, not mentioned in README, are set in the developer's environment  
   <img width="640" alt="Screen Shot 2021-04-05 at 2 08 29 PM" src="https://user-images.githubusercontent.com/13269259/113614650-67d00680-9618-11eb-9595-eb9cd16f160a.png">
   
-  - Expected `index.html` template is present in a separate folder (`client`) rather than within the `server` one, creating runtime issues. I was able to resolve this by moving the `index.html` into the server folder. Generated code should be simple enough to just introduce the user to basic usage of Stripe APIs.
+  - Expected `index.html` template is present in a separate folder (`client`) rather than within the `server` one, creating runtime issues. I was able to resolve this by moving the `index.html` into the server folder.
 
 
 #### Delayed transfers
 
+What I did:  
+Transferred amount through `curl` command for transfer
 
 
-- Control number of transactions and send payouts on threshold amount?
-- Invoicing
-- What do payouts really mean?
+What went well:  
+- Transfer worked as expected without any issues
+
+
+Can be improved:  
+- Since all transactions before this were destination charges, there was no balance in my account to transfer. This led to some issues in discovering how to add funds to my account [explained here](#top-up-from-bank-account-to-stripe-balance).
 
 
 ### Generate Reports
@@ -403,12 +408,12 @@ What I did:
 
 
 Can be improved:  
-- Both my actions led to unexpected failures.
+- Both my actions led to unexpected failures as shown below
 
-- Schedule report failure  
+  Schedule report failure:  
 <img width="615" alt="Screen Shot 2021-04-05 at 1 25 12 PM" src="https://user-images.githubusercontent.com/13269259/113610160-5c79dc80-9612-11eb-9435-54f128525a63.png">
  
-- Email & Download report failure (after clicking 'Download results' button in email)  
+  Email & Download report failure (after clicking 'Download results' button in email):  
 <img width="1316" alt="Screen Shot 2021-04-05 at 1 35 28 PM" src="https://user-images.githubusercontent.com/13269259/113611195-cd6dc400-9613-11eb-99b0-a8ef1b991682.png">
 
 
@@ -421,3 +426,10 @@ My hypothesis is that these errors arose because of the absence of data for the 
 <img width="350" alt="Screen Shot 2021-04-05 at 11 32 33 AM" src="https://user-images.githubusercontent.com/13269259/113598349-9fcc4f00-9602-11eb-8b1d-750a7a163bfc.png">
 
 <img width="441" alt="Screen Shot 2021-04-05 at 11 24 29 AM" src="https://user-images.githubusercontent.com/13269259/113597559-81b21f00-9601-11eb-88d2-0cd3483deff3.png">
+
+
+### Generate Reports
+
+
+
+
