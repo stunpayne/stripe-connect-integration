@@ -34,6 +34,13 @@ I am assuming the persona of a startup's technical co-founder, one who can code,
 
 
 # Friction Log
+
+### Table of Contents
+- [Platform Introduction](#platform-introduction)
+- [Sign Up and Dashboard](#sign-up-and-dashboard)
+
+
+## Platform Introduction
 As the startup's technical co-founder, I'm building an app for an online shopping marketplace which connects artisans building customized home decor with local consumers. Consumers will make payments to my platform app for items they wish to purchase. My app will take a fee and relay the remaining payment to the artisan, after they've delivered the order.
 
 I've heard great things about Stripe so I log on to the website(https://stripe.com/) to check it out.
