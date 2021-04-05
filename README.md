@@ -2,11 +2,11 @@
 Notes on a sample Stripe Connect integration
 
 # Executive Summary
-User Persona:
+<ins>User Persona:</ins>  
 I am assuming the persona of a startup's technical co-founder, one who can code, looking to integrate with a payment gateway for processing transactions on his platform app.
 
 
-Top user needs from a payment gateway:
+<ins>Top user needs from a payment gateway:</ins>  
 - Accepting payments from customers
 - Transferring funds to businesses within defined SLAs with reliability
 - Quick & easy integration
@@ -15,13 +15,13 @@ Top user needs from a payment gateway:
 - Security & Compliance out of the box
 
 
-What worked well:
+<ins>What worked well:</ins>  
 - Most of the integration was smooth and easy. Anyone who knows how to code will easily understand the APIs and get onboarded quickly.
 - Documentation is comprehensive and builds confidence in the capabilities of the Stripe system
 - Code samples were fairly copy-pastable and immensely helpful
 
 
-Improvements:
+<ins>Improvements: </ins>  
 - Stripe CLI-generated code doesn't work out of the box leading to frustration in integration
   - Solution: The code can be simplified to require less setup (such as env variables) from the developer. Regular testing of the sample codes with external developers (and by the Stripe Connect PM and dev teams) will improve reliability of the code. The goal should be to have the code functioning out of the box in 100% of cases.
 - Payout schedule only has periodic (daily/weekly/monthly) options which could lead to high transaction costs for Stripe
