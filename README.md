@@ -29,7 +29,7 @@ I am assuming the persona of a startup's technical co-founder, one who can code,
 - 'Payout' term used for multiple operations (move funds to own bank, transfer to sellers) leading to confusion - even the document heading says "Collect payments then pay out"
   - Solution: Since 'Transfers' is the API for moving funds to sellers, ensure that this is the term used for this action throughout.
 -  Some terms (destination charges, Express accounts) are left unexplained
-  - Solution: Add one-line explanations with hyperlinks to detailed documentation wherever possible
+  - Solution: Add one-line explanations with hyperlinks to detailed documentation wherever possible (possible solution [here](#create-express-account-and-prefill-information))
 
 
 
@@ -38,6 +38,18 @@ I am assuming the persona of a startup's technical co-founder, one who can code,
 ### Table of Contents
 - [Platform Introduction](#platform-introduction)
 - [Sign Up and Dashboard](#sign-up-and-dashboard)
+  - [Website Landing](#website-landing)
+  - [Signing up](#signing-up)
+  - [Exploring dashboard](#exploring-dashboard)
+- [Integration](#integration)
+  - [Prerequisites](#prereqs)
+  - [Set up Stripe](#set-up-stripe)
+  - [Create a connected account](#create-a-connected-account)
+  - [Accept a payment](#accept-a-payment)
+    - [Delayed transfers](#delayed-transfers)
+- [Invoicing and Dashboards]
+  - Invoices to customers
+  - Express account dashboards
 
 
 ## Platform Introduction
@@ -54,7 +66,7 @@ Scrolling down and seeing the logos of Instacart and Shopify provides me further
 
 Scrolling further down, I notice an image showing a graph of declining dispute rates. As an enthusiastic startup co-founder, I hadn't thought about having to manage disputes while conducting business but it's good to see that Stripe's got it covered.
 
-### Trying 'Start Now'
+### Signing up
 I click on 'Start Now' and land on the Sign Up page. Seeing 'marketplaces' under "Support any business model" reaffirms my faith that Stripe will work.
 
 <img width="484" alt="Screen Shot 2021-04-02 at 1 36 41 PM" src="https://user-images.githubusercontent.com/13269259/113443907-76b87e00-93b8-11eb-8748-918c4debd510.png">
@@ -68,14 +80,15 @@ On the dashboard that appears after login, I wonder why verifying the email is t
 
 As a user, I understand that this is to reduce friction but it makes me question what the impact of delaying the verification would be. Having an explanation about that - such as "You can go ahead and get started with your Stripe Integration but would need to verify your email before going live. This is needed so that we know it's really you and can send you important information." -  would help. Nonetheless, I go ahead and verify my email which is simple enough to do.
 
-### Change business name
+<ins>Change business name</ins>  
 I'm not a fan of the "New Business" name on my account. So I go ahead and hover over it. Seeing the "Edit" option right there with a simple way to change my name feels great! Also, writing a generic name like that is a good way to nudge users to actually edit that info - it employs the basic necessity of humans to fix low hanging fruits they spot.
 
 <img width="198" alt="Screen Shot 2021-04-02 at 1 49 58 PM" src="https://user-images.githubusercontent.com/13269259/113444868-52f63780-93ba-11eb-8a1a-0e82091f2c80.png">
 
 I apply my right-brain skills and choose the name "ArtIsOn" as a pun on "artisan", feel good about myself and move on :)
 
-### Scanning the Home Page
+### Exploring dashboard
+<ins>Scanning the Home Page</ins>  
 The 'Today' and 'Reports overview' sections pique my curiosity and I scroll down to have a look.
 All the dashboards seem self-explanatory from their titles and one-line descriptions. These charts give me the impression that the dashboard will maintain and present data related to my business upfront and the Home Page will be particularly useful for snapshot info.
 
@@ -86,7 +99,7 @@ I try to edit the charts using the 'Edit charts' button but that doesn't work, u
 <img width="245" alt="Screen Shot 2021-04-02 at 2 14 22 PM" src="https://user-images.githubusercontent.com/13269259/113446613-ba61b680-93bd-11eb-85eb-31b0ac586967.png">
 
 
-### Scanning menus
+<ins>Scanning menus</ins>  
 I quickly have a look at the other menu options before I start my integration to see what all information will be available on the dashboard. Everything seems quite self-explanatory.
 
 I notice a small bug in the order of the dates mentioned on the 'Financial reports' page. Instead of `Apr2-Mar31`, it should be `Mar31-Apr2` assuming that the last two days are what is being talked about here (unless this shows the previous year's data, in which case Apr 2 doesn't make sense as a starting point).
@@ -229,7 +242,6 @@ To be improved:
 <img width="621" alt="Screen Shot 2021-04-03 at 7 10 49 PM" src="https://user-images.githubusercontent.com/13269259/113494699-4f44dc80-94b0-11eb-8935-22228f1c78d4.png">
 
 &nbsp;&nbsp;I think it is natural for one to question the difference between account types. In order to assuage these concerns, it might be helpful to provide a short description of the accounts as shown below.
-##### Express Account Explanation
 <img width="856" alt="Screen Shot 2021-04-03 at 7 14 20 PM" src="https://user-images.githubusercontent.com/13269259/113494729-cda17e80-94b0-11eb-8372-bca56c12488f.png">
 
 #### Create an account link
@@ -300,6 +312,12 @@ Step 2 To be improved:
 
 The user can be informed in the documentation though that Accounts and AccountLinks are maintained as separate resources and individual APIs exist for them too.
 
+
+### Accept a payment
+
+
+
+#### Delayed transfers
 
 - Tell user about test dashboard early on
 - Control number of transactions and send payouts?
