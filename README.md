@@ -17,8 +17,9 @@ I am assuming the persona of a startup's technical co-founder, one who can code,
 
 <ins>What worked well:</ins>  
 1. Most of the integration was smooth and easy. Anyone who knows how to code will easily understand the APIs and get onboarded quickly.
-2. Documentation is comprehensive and builds confidence in the capabilities of the Stripe system
-3. Code samples were fairly copy-pastable and immensely helpful
+2. Examples of firms using various APIs helps the user find the right product and documentation
+3. Documentation is comprehensive and builds confidence in the capabilities of the Stripe system
+4. Code samples were fairly copy-pastable and immensely helpful
 
 
 <ins>Improvements: </ins>  
@@ -157,64 +158,69 @@ This would reduce the setup time for the user, help them visualize the flow and 
 <img width="844" alt="Screen Shot 2021-04-02 at 6 45 39 PM" src="https://user-images.githubusercontent.com/13269259/113461767-a16bfc00-93e3-11eb-83cb-55995349b1bc.png">
 
 Prereq #1 - Register your platform
+What I did:  
 Upon clicking the link for this, I was taken to this page.
 <img width="1391" alt="Screen Shot 2021-04-02 at 6 46 03 PM" src="https://user-images.githubusercontent.com/13269259/113461784-ae88eb00-93e3-11eb-922c-63f01b93e87a.png">
 
-The major issue with this page is that there was no clear call to action. Coloring the 'Get Started' and 'Find a Partner' buttons differently might make the call more explicit.
-I selected Platform or Marketplace and went ahead. Upon doing that, I was taken to the home page where I was shown this:
+Can be improved:  
+- The major issue with this page is that there was no clear call to action. Coloring the 'Get Started' and 'Find a Partner' buttons differently might make the call more explicit.
+
+- I selected Platform or Marketplace and went ahead. Upon doing that, I was taken to the home page where I was shown this:
 <img width="1370" alt="Screen Shot 2021-04-02 at 6 50 00 PM" src="https://user-images.githubusercontent.com/13269259/113461916-3c64d600-93e4-11eb-8656-a29cecdd98b0.png">
-This is very relevant information. In case this was shown earlier, I would have known exactly which Stripe product to use (Connect) and where to start. This will eliminate the step of finding the right documentation on my own. Additionally, it will reduce one pre-requisite in the documentation which gives the user the impression of reduced setup work. In light of this, I think that registering the platform should be done the first time the user lands on the dashboard.
+This is very relevant information and should have been shown earlier. I would have known exactly which Stripe product to use (Connect) and where to start. This will eliminate the step of finding the right documentation on my own. Additionally, it will reduce one pre-requisite in the documentation which will give the user the impression of reduced setup work.
 
 
 Prereq #2 - Activate your account
+What went well:  
 This flow was smooth overall. I particularly liked the explanatory messages for some fields that showed up on the side. These messages appeared for exactly the fields that are less common knowledge.
 <img width="739" alt="Screen Shot 2021-04-02 at 6 57 49 PM" src="https://user-images.githubusercontent.com/13269259/113462195-54892500-93e5-11eb-8de3-87243b592abd.png">
 
+Can be improved:  
 After completing Step 2, the message on the home page was back to the default "Explore docs" one, leading to an inconsistent experience. As a user, I would expect to see the Connect docs link everytime once I've registered my platform.
 
 <img width="879" alt="Screen Shot 2021-04-02 at 7 02 32 PM" src="https://user-images.githubusercontent.com/13269259/113462337-fd378480-93e5-11eb-86da-e27355b44825.png">
 
 
 Prereq #3 - Fill out your platform profile
-Upon clicking the link to this prereq on the docs page, I was taken to the home page again with a link to complete the profile. Instead, since the action I was going to take was already known, I should have been taken right to the prereq step.
-
-<img width="1379" alt="Screen Shot 2021-04-02 at 7 07 09 PM" src="https://user-images.githubusercontent.com/13269259/113462464-a0889980-93e6-11eb-8235-e0c5c0fdcae6.png">
-
+What went well:  
 At the end of the platform profile, I was shown recommendations for the documentation I can follow for my integration.
 
 <img width="754" alt="Screen Shot 2021-04-02 at 7 16 26 PM" src="https://user-images.githubusercontent.com/13269259/113462724-ee51d180-93e7-11eb-86ea-4f5c50c5fe32.png">
 
-After having gone through a page listing all docs, finding the right one and completing the prereqs, I am shown the links to the docs that Stripe believes is right for me. This experience reaffirms my earlier point that these steps should have come earlier. In doing that, there surely is a cost of asking the user to complete several steps before they can begin looking into the documentation but that would be the right thing to do as the user hasn't begun the integration yet anyway. Moreover, if the user is told that these steps will help them find the right integration and documentation, they would be more easily convinced to completing these forms.
+Can be improved:  
+- Upon clicking the link to this prereq on the docs page, I was taken to the home page again with a link to complete the profile. Instead, since the action I was going to take was already known, I should have been taken right to the prereq step.
 
-The section below this was extremely helpful. 
+<img width="1379" alt="Screen Shot 2021-04-02 at 7 07 09 PM" src="https://user-images.githubusercontent.com/13269259/113462464-a0889980-93e6-11eb-8235-e0c5c0fdcae6.png">
+
+- The section below this was extremely helpful. It shows the user key APIs to integrate with to solve their use case so they know early on which flows/docs to explore.
 
 <img width="1370" alt="Screen Shot 2021-04-02 at 7 20 37 PM" src="https://user-images.githubusercontent.com/13269259/113462833-8354ca80-93e8-11eb-8244-81dbf4d40a25.png">
 
 
+- After having gone through a page listing all docs, finding the right one and completing the prereqs, I am shown the links to the docs that Stripe believes is right for me. This experience reaffirms my earlier point that these steps should have come earlier. Telling the user that these steps will help them find the right integration and documentation would more easily convince them to complete these forms. Since there is the cost of asking the user to complete several steps before reaching the documentation, increasing onboarding friction, the user can be provided a choice between exploring docs and letting us find them the right one.
+
+
 Prereq #3 - Brand settings
 Went well:
-- Allowing the merchant to customize how the onboarding page looks is good for user experience. It provides their users the feeling that they're still within the context of the original website even though they've been redirected to a Stripe page for onboarding, enhancing the user's trust in the flow. Moreover, merchants would love to customize the experience at every step to have greater control of the overall user experience.
+- Allowing the merchant to customize how the onboarding page looks is good for user experience. It provides the platform's users the feeling that they're still within the context of the platform even though they've been redirected to a Stripe page for onboarding, enhancing the user's trust in the flow. Moreover, merchants would love to customize the experience at every step to have greater control of the overall user experience.
 
 <img width="1009" alt="Screen Shot 2021-04-03 at 5 19 13 PM" src="https://user-images.githubusercontent.com/13269259/113492902-b78bc200-94a0-11eb-82e9-f5444863694e.png">
 
 
 To be improved:
-- The prereq bullet says "Customize your brand settings on the Connect settings page. This information is required for Connect Onboarding.". As a user, I can't put my finger on what 'Connect Onboarding' means. Are we talking about onboarding me as a business onto Connect? Or about onboarding sellers onto my platform?  
-Solution: Mention clearly that this action will customize the page that sellers see while signing up on the business platform.
+- The prereq bullet says "Customize your brand settings on the Connect settings page. This information is required for Connect Onboarding". As a user, I can't put my finger on what 'Connect Onboarding' means. Are we talking about onboarding me as a business onto Connect? Or about onboarding sellers onto my platform?  
+Solution: Mention clearly that this action will customize the page that sellers/vendors see while signing up on the business platform.
 
 - Upon clicking the link, I am taken to the Connect Settings page but not directly to the section of the prereq. In order to verify the action to take here, I need to go back to the documentation page and re-read "Customize your brand settings.." and scroll down to look at all the headings on the Connect Settings page to learn that 'Branding' is the section I need to head to.  
 
-- The 'Save branding changes' button is well named as it preserves the context of the prerequisite.
+- The 'Save branding changes' button is well named as it preserves the context of the prerequisite. However, upon clicking it, a loader appears to show that saving is in progress but when the save is completed, the loader disappears and the button becomes unclickable. This leaves the user wondering whether the save was successfully completed so a temporary tick mark might be more satisfactory from a UX perspective.
 
 <img width="197" alt="Screen Shot 2021-04-03 at 5 23 20 PM" src="https://user-images.githubusercontent.com/13269259/113492992-4b5d8e00-94a1-11eb-9d21-39238db2637e.png">
-
-However, upon clicking it, a loader appears to show that saving is in progress but when the save is completed, the loader disappears and the button becomes unclickable. This leaves the user wondering whether the save was successfully completed so a temporary tick mark might be more satisfactory from a UX perspective.
 
 <img width="206" alt="Screen Shot 2021-04-03 at 5 27 17 PM" src="https://user-images.githubusercontent.com/13269259/113493052-d8a0e280-94a1-11eb-8153-6fa0c7819604.png">
 
 
-For further steps  
-Programming language chosen: Python 3
+_*Programming language chosen: Python 3*_
 
 ### Set up Stripe
 Went well:
@@ -229,6 +235,7 @@ Current:
 
 Suggested:  
 <img width="842" alt="Screen Shot 2021-04-03 at 5 45 44  PM" src="https://user-images.githubusercontent.com/13269259/113493385-6c73ae00-94a4-11eb-8042-cf53c885ffde.png">
+
 
 ### Create a connected account
 
@@ -338,7 +345,8 @@ The user can be informed in the documentation though that Accounts and AccountLi
 
 ### Accept a payment
 
-
+Went well:
+- The sequence diagram is very helpful and is shown at the right time
 
 #### Delayed transfers
 
