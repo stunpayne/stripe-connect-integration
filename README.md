@@ -51,7 +51,7 @@ I am assuming the persona of a startup's technical co-founder, one who can code,
 5. 'Payout' term used for multiple operations (move funds to own bank, transfer to sellers) leading to confusion - even the document heading says "Collect payments then pay out"  
     * Solution: Since 'Transfers' is the API for moving funds to sellers, ensure that this is the term used for this action throughout the documentation.
 6. Some terms (destination charges, Express accounts) are left unexplained  
-    * Solution: Add one-line explanations with hyperlinks to detailed documentation wherever possible (possible solution [here](#create-express-account-and-prefill-information))
+    * Solution: Add one-line explanations with hyperlinks to detailed documentation wherever possible (as shown in the [improvement for Express accounts](#create-express-account-and-prefill-information))
 
 
 # Friction Log
