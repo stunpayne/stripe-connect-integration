@@ -60,20 +60,28 @@ I've heard great things about Stripe so I log on to the website(https://stripe.c
 ## Sign Up and Dashboard
 
 ### Website Landing
-My initial thoughts are highly positive. I see the one-liner on Stripe mentions "*..startups..use Stripe.. to accept payments, send payouts, and manage their businesses online*", which encourages me. 
-I like seeing the "Start now" button which provides me a good place to start - I know I have to come back to this. 
-Scrolling down and seeing the logos of Instacart and Shopify provides me further confidence that Stripe would work for me.
+What I did:  
+Open stripe.com
 
-Scrolling further down, I notice an image showing a graph of declining dispute rates. As an enthusiastic startup co-founder, I hadn't thought about having to manage disputes while conducting business but it's good to see that Stripe's got it covered.
+What went well:  
+- My initial thoughts are highly positive. Encouraging one-liner on Stripe - "*..startups..use Stripe.. to accept payments, send payouts, and manage their businesses online*"
+- "Start now" button provides a good place to start - I already know I have to come back to this
+- Scrolling down and seeing the logos of Instacart and Shopify provides me further confidence that Stripe would work for me.
 
 ### Signing up
-I click on 'Start Now' and land on the Sign Up page. Seeing 'marketplaces' under "Support any business model" reaffirms my faith that Stripe will work.
+What I did:  
+I click on 'Start Now' and land on the Sign Up page. 
+
+What went well:  
+Seeing 'marketplaces' under "Support any business model" reaffirms my faith that Stripe will work.
 
 <img width="484" alt="Screen Shot 2021-04-02 at 1 36 41 PM" src="https://user-images.githubusercontent.com/13269259/113443907-76b87e00-93b8-11eb-8748-918c4debd510.png">
 
 The Sign Up is simple and easy. It makes sense that email, password, full name and country were asked - nothing out of the blue.
 
-I've received an email to verify my email on Stripe. 
+
+Can be improved:  
+1. I've received an email to verify my email on Stripe. 
 On the dashboard that appears after login, I wonder why verifying the email is the fourth step instead of the first.
 
 <img width="904" alt="Screen Shot 2021-04-02 at 1 44 06 PM" src="https://user-images.githubusercontent.com/13269259/113444425-808eb100-93b9-11eb-9086-884408cbe70b.png">
