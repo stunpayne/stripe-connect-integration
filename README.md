@@ -35,7 +35,7 @@ I am assuming the persona of a startup's technical co-founder, one who can code,
 
 <ins>What worked well:</ins>  
 1. Most of the <ins>integration was smooth and easy</ins>. Anyone who knows how to code will easily understand the APIs and get onboarded quickly.
-2. Examples of firms using various APIs helps the user <ins>find the right product and documentation</ins>
+2. Examples of firms using various APIs helps the user <ins>find the right product and documentation</ins> and gain confidence in the system
 3. Documentation is comprehensive and <ins>builds confidence in Stripe's capabilities</ins>
 4. Documentation helps to understand not only Stripe APIs but also payment flows generally and also <ins>acts as a tutorial on building a seamless payment customer experience</ins>
 5. Code samples were fairly <ins>copy-pastable</ins> and immensely helpful
@@ -46,6 +46,8 @@ I am assuming the persona of a startup's technical co-founder, one who can code,
     * Solution: The code can be simplified to require less setup (such as env variables) from the developer. Regular testing of the sample codes with external developers (and by the Stripe Connect PM and dev teams) will improve reliability of the code. The goal should be to have the code functioning out of the box in 100% of cases.
 2. Incorrect dates at multiple places make the user question whether Stripe's reports will be accurate  
     * Solution: Correct all dates facing the user. Add automation testing for front end to ensure long-term reliability.
+3. Platforms shouldn't have to switch to manual payouts to add funds for transfers.
+    * Solution: Maintain balances for transfers and other expenses in separate compartments, allow user to direct funds from payments, top-ups etc. to individual compartments.
 4. Payout schedule only has periodic (daily/weekly/monthly) options which could lead to high transaction costs for Stripe  
     * Solution: An option to trigger payouts when the balance reaches a threshold amount (and nudging users to adopt this option) will reduce transaction costs for Stripe
 5. 'Payout' term used for multiple operations (move funds to own bank, transfer to sellers) leading to confusion - even the document heading says "Collect payments then pay out"  
@@ -422,6 +424,8 @@ My hypothesis is that these errors arose because of the absence of data for the 
 
 
 ### Top up from bank account to Stripe balance
+What I did:  
+Attempt to top up funds from bank account to Stripe balance to test separete transfers
 
 <img width="350" alt="Screen Shot 2021-04-05 at 11 32 33 AM" src="https://user-images.githubusercontent.com/13269259/113598349-9fcc4f00-9602-11eb-8b1d-750a7a163bfc.png">
 
