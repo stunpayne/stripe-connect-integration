@@ -42,16 +42,16 @@ I am assuming the persona of a startup's technical co-founder, one who can code,
 
 
 <ins>Improvements: </ins>  
-1. Stripe CLI-generated code doesn't work out of the box leading to frustration in integration
-  - Solution: The code can be simplified to require less setup (such as env variables) from the developer. Regular testing of the sample codes with external developers (and by the Stripe Connect PM and dev teams) will improve reliability of the code. The goal should be to have the code functioning out of the box in 100% of cases.
-2. Incorrect dates at multiple places make the user question whether Stripe's reports will be accurate
-  - Solution: Correct all dates facing the user. Add automation testing for front end to ensure long-term reliability.
-4. Payout schedule only has periodic (daily/weekly/monthly) options which could lead to high transaction costs for Stripe
-  - Solution: An option to trigger payouts when the balance reaches a threshold amount (and nudging users to adopt this option) will reduce transaction costs for Stripe
-5. 'Payout' term used for multiple operations (move funds to own bank, transfer to sellers) leading to confusion - even the document heading says "Collect payments then pay out"
-  - Solution: Since 'Transfers' is the API for moving funds to sellers, ensure that this is the term used for this action throughout the documentation.
-6. Some terms (destination charges, Express accounts) are left unexplained
-  - Solution: Add one-line explanations with hyperlinks to detailed documentation wherever possible (possible solution [here](#create-express-account-and-prefill-information))
+1. Stripe CLI-generated code doesn't work out of the box leading to frustration in integration  
+    * Solution: The code can be simplified to require less setup (such as env variables) from the developer. Regular testing of the sample codes with external developers (and by the Stripe Connect PM and dev teams) will improve reliability of the code. The goal should be to have the code functioning out of the box in 100% of cases.
+2. Incorrect dates at multiple places make the user question whether Stripe's reports will be accurate  
+    * Solution: Correct all dates facing the user. Add automation testing for front end to ensure long-term reliability.
+4. Payout schedule only has periodic (daily/weekly/monthly) options which could lead to high transaction costs for Stripe  
+    * Solution: An option to trigger payouts when the balance reaches a threshold amount (and nudging users to adopt this option) will reduce transaction costs for Stripe
+5. 'Payout' term used for multiple operations (move funds to own bank, transfer to sellers) leading to confusion - even the document heading says "Collect payments then pay out"  
+    * Solution: Since 'Transfers' is the API for moving funds to sellers, ensure that this is the term used for this action throughout the documentation.
+6. Some terms (destination charges, Express accounts) are left unexplained  
+    * Solution: Add one-line explanations with hyperlinks to detailed documentation wherever possible (possible solution [here](#create-express-account-and-prefill-information))
 
 
 # Friction Log
