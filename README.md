@@ -1,26 +1,40 @@
 # stripe-connect-integration
-A sample Stripe Connect integration
+Notes on a sample Stripe Connect integration
 
 # Executive Summary
+User Persona:
+I am assuming the persona of a startup's technical co-founder, one who can code, looking to integrate with a payment gateway for processing transactions on his platform app.
 
-Top concerns:
-- Accepting payments from users
-- Paying out to businesses in defined SLAs with reliability
+
+Top user needs from a payment gateway:
+- Accepting payments from customers
+- Transferring funds to businesses within defined SLAs with reliability
 - Quick & easy integration
-- Easy generation of invoices and dashboards for businesses
-- Security
+- Easy generation of invoices for customers
+- Dashboard for sellers to debit funds to my platform
+- Security & Compliance out of the box
+
 
 What worked well:
-- Integration was super easy, documentation is self explanatory and code generated automatically is a big help
+- Most of the integration was smooth and easy. Anyone who knows how to code will easily understand the APIs and get onboarded quickly.
+- Documentation is comprehensive and builds confidence in the capabilities of the Stripe system
+- Code samples were fairly copy-pastable and immensely helpful
 
 
-To be improved:
-- Some terms (destination charges, Express accounts) are left unexplained
+Improvements:
+- Stripe CLI-generated code doesn't work out of the box leading to frustration in integration
+  - Solution: The code can be simplified to require less setup (such as env variables) from the developer. Regular testing of the sample codes with external developers (and by the Stripe Connect PM and dev teams) will improve reliability of the code. The goal should be to have the code functioning out of the box in 100% of cases.
+- Payout schedule only has periodic (daily/weekly/monthly) options which could lead to high transaction costs for Stripe
+  - Solution: An option to trigger payouts when the balance reaches a threshold amount (and nudging users to adopt this option) will reduce transaction costs for Stripe
+- 'Payout' term used for multiple operations (move funds to own bank, transfer to sellers) leading to confusion - even the document heading says "Collect payments then pay out"
+  - Solution: Since 'Transfers' is the API for moving funds to sellers, ensure that this is the term used for this action throughout.
+-  Some terms (destination charges, Express accounts) are left unexplained
+  - Solution: Add one-line explanations with hyperlinks to detailed documentation wherever possible
 
 
 
 # Friction Log
-I am assuming the persona of a startup's technical co-founder, one who can code, looking to integrate with a payment gateway for processing transactions on his platform app. The app I'm building is an online shopping marketplace which connects artisans building customized home decor with local consumers. Consumers will make payments to my platform app for items they wish to purchase. My app will take a small fixed percentage fee and relay the remaining payment to the artisan.
+As the startup's technical co-founder, I'm building an app for an online shopping marketplace which connects artisans building customized home decor with local consumers. Consumers will make payments to my platform app for items they wish to purchase. My app will take a fee and relay the remaining payment to the artisan, after they've delivered the order.
 
 I've heard great things about Stripe so I log on to the website(https://stripe.com/) to check it out.
 
@@ -208,6 +222,7 @@ To be improved:
 <img width="621" alt="Screen Shot 2021-04-03 at 7 10 49 PM" src="https://user-images.githubusercontent.com/13269259/113494699-4f44dc80-94b0-11eb-8935-22228f1c78d4.png">
 
 &nbsp;&nbsp;I think it is natural for one to question the difference between account types. In order to assuage these concerns, it might be helpful to provide a short description of the accounts as shown below.
+##### Express Account Explanation
 <img width="856" alt="Screen Shot 2021-04-03 at 7 14 20 PM" src="https://user-images.githubusercontent.com/13269259/113494729-cda17e80-94b0-11eb-8372-bca56c12488f.png">
 
 #### Create an account link
@@ -280,6 +295,9 @@ The user can be informed in the documentation though that Accounts and AccountLi
 
 
 - Tell user about test dashboard early on
+- Control number of transactions and send payouts?
+- Invoicing
+- What do payouts really mean?
 
 <img width="693" alt="Screen Shot 2021-04-04 at 11 54 59 AM" src="https://user-images.githubusercontent.com/13269259/113515854-95e01880-953c-11eb-8f19-00bfce6c7a6d.png">
 
