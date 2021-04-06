@@ -178,7 +178,7 @@ This would reduce the setup time for the user, help them visualize the flow and 
 
 <img width="844" alt="Screen Shot 2021-04-02 at 6 45 39 PM" src="https://user-images.githubusercontent.com/13269259/113461767-a16bfc00-93e3-11eb-83cb-55995349b1bc.png">
 
-Prereq #1 - Register your platform
+Prereq #1 - Register your platform  
 What I did:  
 Upon clicking the link for this, I was taken to this page.
 <img width="1391" alt="Screen Shot 2021-04-02 at 6 46 03 PM" src="https://user-images.githubusercontent.com/13269259/113461784-ae88eb00-93e3-11eb-922c-63f01b93e87a.png">
@@ -191,7 +191,7 @@ Can be improved:
 This is very relevant information and should have been shown earlier. I would have known exactly which Stripe product to use (Connect) and where to start. This will eliminate the step of finding the right documentation on my own. Additionally, it will reduce one pre-requisite in the documentation which will give the user the impression of reduced setup work.
 
 
-Prereq #2 - Activate your account
+Prereq #2 - Activate your account  
 What went well:  
 This flow was smooth overall. I particularly liked the explanatory messages for some fields that showed up on the side. These messages appeared for exactly the fields that are less common knowledge.
 <img width="739" alt="Screen Shot 2021-04-02 at 6 57 49 PM" src="https://user-images.githubusercontent.com/13269259/113462195-54892500-93e5-11eb-8de3-87243b592abd.png">
@@ -202,7 +202,7 @@ After completing Step 2, the message on the home page was back to the default "E
 <img width="879" alt="Screen Shot 2021-04-02 at 7 02 32 PM" src="https://user-images.githubusercontent.com/13269259/113462337-fd378480-93e5-11eb-86da-e27355b44825.png">
 
 
-Prereq #3 - Fill out your platform profile
+Prereq #3 - Fill out your platform profile  
 What went well:  
 At the end of the platform profile, I was shown recommendations for the documentation I can follow for my integration.
 
@@ -221,14 +221,14 @@ Can be improved:
 - After having gone through a page listing all docs, finding the right one and completing the prereqs, I am shown the links to the docs that Stripe believes is right for me. This experience reaffirms my earlier point that these steps should have come earlier. Telling the user that these steps will help them find the right integration and documentation would more easily convince them to complete these forms. Since there is the cost of asking the user to complete several steps before reaching the documentation, increasing onboarding friction, the user can be provided a choice between exploring docs and letting us find them the right one.
 
 
-Prereq #3 - Brand settings
-Went well:
+Prereq #3 - Brand settings  
+Went well:  
 - Allowing the merchant to customize how the onboarding page looks is good for user experience. It provides the platform's users the feeling that they're still within the context of the platform even though they've been redirected to a Stripe page for onboarding, enhancing the user's trust in the flow. Moreover, merchants would love to customize the experience at every step to have greater control of the overall user experience.
 
 <img width="1009" alt="Screen Shot 2021-04-03 at 5 19 13 PM" src="https://user-images.githubusercontent.com/13269259/113492902-b78bc200-94a0-11eb-82e9-f5444863694e.png">
 
 
-To be improved:
+Can be improved:  
 - The prereq bullet says "Customize your brand settings on the Connect settings page. This information is required for Connect Onboarding". As a user, I can't put my finger on what 'Connect Onboarding' means. Are we talking about onboarding me as a business onto Connect? Or about onboarding sellers onto my platform?  
 Solution: Mention clearly that this action will customize the page that sellers/vendors see while signing up on the business platform.
 
@@ -248,7 +248,7 @@ Went well:
 - This step is simple and self-explanatory. 
 - Throughout the documentation, the presence of code samples in multiple languages is helpful to a wide range of developers and gives the impression of a very mature API base.
 
-To be improved:
+Can be improved:
 - The prevalent version of Python now is Python3. Anyone starting a new codebase in Python would probably use Python3. The documentation should hence be updated to include `pip3` along with `pip` for Python3 users as shown below.
  
 Current:  
@@ -277,7 +277,7 @@ The "What you're building" view is helpful as it allows the user to begin with t
 <img width="837" alt="Screen Shot 2021-04-03 at 6 50 12 PM" src="https://user-images.githubusercontent.com/13269259/113494394-6e8e3a80-94ad-11eb-965a-f7ff3b192925.png">
 
 
-To be improved:  
+Can be improved:  
 - The button, however, opens the link on the same page, moving the reader away from the documentation. It should, instead, open on a different page so that the user can close that window and easily come back to the documentation.
 
 
@@ -287,7 +287,7 @@ Went well:
 
 <img width="844" alt="Screen Shot 2021-04-03 at 7 02 04 PM" src="https://user-images.githubusercontent.com/13269259/113494577-15bfa180-94af-11eb-8c03-1148542e6e66.png">
 
-To be improved:
+Can be improved:
 - The moment I read I have to create an 'Express account', I started questioning what that meant. Since there was no explanation here, I resorted to checking out the [Accounts API Page](https://stripe.com/docs/api/accounts). From there, I followed a link to "[create and manage Express or Custom accounts](https://stripe.com/docs/connect/accounts)" that explained the difference in a table.
 
 <img width="621" alt="Screen Shot 2021-04-03 at 7 10 49 PM" src="https://user-images.githubusercontent.com/13269259/113494699-4f44dc80-94b0-11eb-8935-22228f1c78d4.png">
@@ -296,7 +296,7 @@ To be improved:
 <img width="856" alt="Screen Shot 2021-04-03 at 7 14 20 PM" src="https://user-images.githubusercontent.com/13269259/113494729-cda17e80-94b0-11eb-8372-bca56c12488f.png">
 
 #### Create an account link
-To be improved:  
+Can be improved:  
 - The value of the 'account' parameter is shown in the code sample but not explained in the description above it. A sample account ID is mentioned. Due to this, the user would have to check which parameter in the Account API response corresponds to the given value. A simple explanation as below might help the dev get the answer more quickly.
 
 <img width="748" alt="Screen Shot 2021-04-03 at 7 49 35 PM" src="https://user-images.githubusercontent.com/13269259/113495229-b9ac4b80-94b5-11eb-8d10-e34c0fec5b6e.png">
@@ -324,7 +324,7 @@ Went well:
 <img width="801" alt="Screen Shot 2021-04-03 at 8 17 21 PM" src="https://user-images.githubusercontent.com/13269259/113495820-9be0e580-94b9-11eb-8c94-7413ac03c50a.png">
 
 
-To be improved:  
+Can be improved:  
 - There should be a link on the `account.updated` webhooks bullet just as there is one on the Accounts API one
 
 <img width="523" alt="Screen Shot 2021-04-03 at 8 16 47 PM" src="https://user-images.githubusercontent.com/13269259/113495809-853a8e80-94b9-11eb-9f01-503add970735.png">
@@ -333,10 +333,10 @@ To be improved:
 
 #### Handle users that haven’t completed onboarding 
 
-Went well:
+Went well:  
 - The action to take in the cases wherein a user coming to the `return_url` might not have been onboarded completely was unanswered and lingering at the back of my mind until this point. The explanation in this section answers this question directly and completely.
 
-To be improved:
+Can be improved:  
 - One strength of Stripe's docs is that almost every heading is hyperlinked. This can be used to hyperlink API parameters such as `charges_enabled` in the below paragraph to [this link](https://stripe.com/docs/api/accounts/object#account_object-charges_enabled). This will provide the user an easy way to understand the meanings and usage of API parameters, especially in cases like this where the meaning of 'charges' may not be self explanatory.
 
 <img width="841" alt="Screen Shot 2021-04-03 at 8 29 45 PM" src="https://user-images.githubusercontent.com/13269259/113496047-558c8600-94bb-11eb-9adb-e5fa0ef975f2.png">
@@ -346,7 +346,7 @@ To be improved:
 Went well:
 - Test accounts and phone numbers in the flow were very helpful to make the process easier.
 
-To be improved:
+Can be improved:
 - The redirection from the account link to the `return_url` is a GET call which means that no information about the account is passed to the platform application. Since the next step for platforms would be to call the Accounts API, the account ID needs to be known. In practice this means that platforms will have to store the account ID from the first call before the redirection Hence, the account ID needs to be passed to the `return_url` 
 
 
@@ -354,7 +354,7 @@ Step 2 Went Well:
 - Overall, the order of the steps 2.1-5 makes sense and just going through them explains what needs to be done to the user. I came out of this step with almost no questions about the actions to take in different scenarios and understood very well what I am supposed to do.
 
 
-Step 2 To be improved:
+Step 2 Can be improved:
 - From a user's perspective, making two API calls to get an account link for redirection seems redundant. Although it makes sense from Stripe's perspective to separate the resources for Accounts and AccountLinks, as a user, I see no additional benefit of separating the API calls as there is no additional step from my end between them. 
 
   As can be seen from the sample server code generated by Stripe, the only thing in between the API calls is storing the account ID in the session, which can be done after the single combined API call as well, before redirection.
