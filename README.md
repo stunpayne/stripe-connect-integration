@@ -26,7 +26,8 @@ python3 -m venv env
 2. Install dependencies
 
 ```
-pip install -r requirements.txt
+cd connect-onboarding-for-express/server/
+pip3 install -r requirements.txt
 ```
 
 3. Export and run the application
