@@ -16,7 +16,7 @@ I am assuming the persona of a startup's technical co-founder, one who can code,
 - Security & Compliance out of the box
 
 
-<ins>Flows I tried:</ins>  
+<ins>Connect Flows I tried:</ins>  
 - Create and link connected account
 - Accept payment from customer
 - Transfer funds to connected account during charge
@@ -456,7 +456,7 @@ What went well:
 Can be improved:  
 1. Creation of coupons and taxes happens in a new browser tab. Once these are created, the user may resort to a) restarting the invoicing flow in the same tab OR b) if they are sophisticated enough browser users, closing the new tab and going back to the older tab to continue the flow. In this case, the list of coupons and taxes is not immediately updated.
 
-This can be solved by updating the list periodically if the user clicks on the option to create a new coupon or tax. Doing this will provide the user greater satisfaction through seamlessness. 
+This can be solved by updating the list periodically (every second or two) if the user clicks on the option to create a new coupon or tax. Doing this will provide the user greater satisfaction by virtue of seamlessness. 
 
 
 
