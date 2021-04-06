@@ -38,6 +38,7 @@ ORIGIN_LOCAL = "http://localhost:4242"
 # with persisting the account ID as a session variable so I resorted to storing it as a local variable
 # for testing purposes.
 account_id = None
+transfer_group_id = None
 
 @app.route('/', methods=['GET'])
 def get_example():
@@ -85,6 +86,7 @@ def update_account_status():
 
 @app.route('/secret')
 def secret():
+    global transfer_group_id
     transfer_group_id = "ORDER" + str(int(time.time()))
     print(transfer_group_id)
     payment_intent = stripe.PaymentIntent.create(
@@ -95,6 +97,20 @@ def secret():
     )
 
     return jsonify(client_secret=payment_intent.client_secret)
+
+
+@app.route('/transfer', methods=['POST'])
+def transfer():
+    print(account_id, transfer_group_id)
+    # Create a Transfer to a connected account (later):
+    transfer = stripe.Transfer.create(
+      amount=150,
+      currency='usd',
+      destination=account_id,
+      transfer_group=transfer_group_id,
+    )
+
+    return jsonify(transfer_id=transfer.id)
 
 
 def _generate_account_link(account_id, origin):

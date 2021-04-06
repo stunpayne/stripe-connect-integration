@@ -34,7 +34,6 @@ window.addEventListener("load", function() {
         ev.preventDefault();
         console.log("Clicked");
 
-
         fetch("/secret", {
                 method: "GET",
                 headers: {
@@ -60,11 +59,44 @@ window.addEventListener("load", function() {
                     } else {
                         // The payment has been processed!
                         if (result.paymentIntent.status === 'succeeded') {
-                          alert("Payment Success!")
+                            alert("Payment Success!");
+                            var transfer = document.getElementById("transfer-form");
+                            transfer.style.display = "block";
                         }
                     }
                 });
             });
 
     });
+
+
+    var transferForm = document.getElementById('transfer-form');
+
+    transferForm.addEventListener('submit', function(ev) {
+        ev.preventDefault();
+        console.log("Transfer Clicked");
+
+
+        fetch("/transfer", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                }
+            })
+            .then(response => response.json())
+            .then(result => {
+                console.log(result);
+                if (result.transfer_id) {
+                    // Show error to your customer (e.g., insufficient funds)
+                    console.log("Transfer success!");
+                    alert("Transfer Success!")
+                } else {
+                    alert("Transfer Failed!")
+                }
+            });
+
+    });
+
+
+
 });
