@@ -46,7 +46,7 @@ I am assuming the persona of a startup's technical co-founder, one who can code,
     * Solution: The code can be simplified to require less setup (such as env variables) from the developer. Regular testing of the sample codes with external developers (and by the Stripe Connect PM and dev teams) will improve reliability of the code. The goal should be to have the code functioning out of the box in 100% of cases.
 2. Incorrect dates at multiple places make the user question whether Stripe's reports will be accurate  
     * Solution: Correct all dates facing the user. Add automation testing for front end to ensure long-term reliability.
-3. Platforms shouldn't have to switch to manual payouts to add funds for transfers.
+3. Platforms shouldn't have to switch to manual payouts to add funds for transfers
     * Solution: Although I would like to investigate this further, my current hypothesis is that allowing platforms to add funds even on an automated payout schedule should not be an issue.
 4. Payout schedule only has periodic (daily/weekly/monthly) options which could lead to high transaction costs for Stripe  
     * Solution: An option to trigger payouts when the balance reaches a threshold amount (and nudging users to adopt this option) will reduce transaction costs for Stripe
@@ -72,7 +72,7 @@ I am assuming the persona of a startup's technical co-founder, one who can code,
     - [Delayed transfers](#delayed-transfers)
 - [Generate Reports](#generate-reports)
 - [Top up Stripe balance](#top-up-from-bank-account-to-stripe-balance)
-- [Invoicing and Dashboards](#invoicing-and-dashboards)
+- [Invoicing](#invoicing)
 
 
 ## Platform Introduction
@@ -369,7 +369,7 @@ The user can be informed in the documentation though that Accounts and AccountLi
 What went well:  
 - The sequence diagram clearly lays out the entire flow and makes it easy to understand how payment works.
 - Code snippets provide minimal working code required for integration
-- Code worked exactly as doc mentioned. Since this was the major step, this increases confidence in Stripe docs
+- Code worked exactly as doc mentioned. Since accepting payment was the major step, this increases confidence in Stripe docs
 - `client_secret` is a well named term - better than the other term I've generally heard around ('payment_token')
 - Stripe CLI generates modular code, providing options for language, inclusion of webhooks etc., allowing the user to generate samples as per their integration needs and reducing effort on their end  
 <img width="693" alt="Screen Shot 2021-04-04 at 11 54 59 AM" src="https://user-images.githubusercontent.com/13269259/113515854-95e01880-953c-11eb-8f19-00bfce6c7a6d.png">
@@ -442,7 +442,7 @@ Can be improved:
 <img width="350" alt="Screen Shot 2021-04-05 at 11 32 33 AM" src="https://user-images.githubusercontent.com/13269259/113598349-9fcc4f00-9602-11eb-8b1d-750a7a163bfc.png">
 
 
-### Invoicing and Dashboards
+### Invoicing
 What I did:  
 Although it wasn't relevant to my current platform, I tried out the no-code invoice feature as it seems useful for future use cases. Also, I believe no-code is the future and, thus, an area in which Stripe should focus its efforts on.
 
@@ -455,6 +455,8 @@ What went well:
 
 Can be improved:  
 1. Creation of coupons and taxes happens in a new browser tab. Once these are created, the user may resort to a) restarting the invoicing flow in the same tab OR b) if they are sophisticated enough browser users, closing the new tab and going back to the older tab to continue the flow. In this case, the list of coupons and taxes is not immediately updated.
+
+This can be solved by updating the list periodically if the user clicks on the option to create a new coupon or tax. Doing this will provide the user greater satisfaction through seamlessness. 
 
 
 
