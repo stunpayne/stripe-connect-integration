@@ -4,7 +4,6 @@ Notes on a sample Stripe Connect integration
 ## Requirements
 
 - Python 3
-- [Configured .env file](../README.md)
 
 ## How to run
 
