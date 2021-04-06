@@ -34,6 +34,7 @@ window.addEventListener("load", function() {
         ev.preventDefault();
         console.log("Clicked");
 
+
         fetch("/secret", {
                 method: "GET",
                 headers: {
@@ -55,15 +56,11 @@ window.addEventListener("load", function() {
                     if (result.error) {
                         // Show error to your customer (e.g., insufficient funds)
                         console.log(result.error.message);
+                        alert(result.error.message)
                     } else {
                         // The payment has been processed!
                         if (result.paymentIntent.status === 'succeeded') {
                           alert("Payment Success!")
-                            // Show a success message to your customer
-                            // There's a risk of the customer closing the window before callback
-                            // execution. Set up a webhook or plugin to listen for the
-                            // payment_intent.succeeded event that handles any business critical
-                            // post-payment actions.
                         }
                     }
                 });
